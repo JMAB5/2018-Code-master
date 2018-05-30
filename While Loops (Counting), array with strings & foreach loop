@@ -1,0 +1,54 @@
+class Program
+	{
+		static void Main(string[] args)
+		{
+
+
+			//create a while loop counting from -100 to 100 by 25s
+
+			int counter = -100;
+			while (counter <= 100)
+			{
+				Console.WriteLine(counter);
+				counter += 25;
+			}
+			//create a do while loop from 0 to 100 by 5s, once it reaches 50 count by 10s
+			counter = 0;
+			while (counter <= 100)
+			{
+				Console.WriteLine(counter);
+        if (counter < 50)
+				{
+					counter += 5;
+				}
+				else
+				{
+					counter += 10;
+				}
+			}
+			//create a for loop counting 10 to 100 by 10s
+			for (counter = 0; counter <= 100; counter += 10)
+      {
+				Console.WriteLine(counter);
+			}
+			//create an array of strings with 5 fighting games for a loop to output all except the middle
+			string[] games = new string[] { "Street Fighter", "Tekken", "Dragon Ball FighterZ", "Super Smash Bros", "Mortal KOmbat" };
+			for (int i = 0; i < games.Length; ++i)
+			{
+				if (i != games.Length / 2)
+					Console.WriteLine(games[i]);
+			}
+			//create a foreach loop that outputs the 5 fighting games
+			foreach (string game in games)
+			{
+				Console.WriteLine(game);
+			}
+			//create a foreach loop that outputs the 5 fighting games along with their index
+
+				int index = 0;
+			foreach (string game in games)
+			{
+				Console.WriteLine(index + " : " + game);
+				++index;
+			}
+			Console.ReadLine();
